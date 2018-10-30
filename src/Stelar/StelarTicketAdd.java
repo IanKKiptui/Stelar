@@ -314,7 +314,7 @@ this.dispose();        // TODO add your handling code here:
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
         if(seat.getText().equals(""))
         {
-        JOptionPane.showMessageDialog(createUser,"Sorry, you did not enter the seat number!","Missing ID!",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(createUser,"Sorry, you did not enter the seat number!","Missing Seat!",JOptionPane.INFORMATION_MESSAGE);
         seat.requestFocus();
         }
         else if(price.getText().equals(""))
