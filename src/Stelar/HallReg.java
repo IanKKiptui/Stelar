@@ -45,7 +45,7 @@ try {
          statement.executeUpdate();
          statement.close();
                      int k;
-            k=JOptionPane.showConfirmDialog(createUser,"Hall details successfully saved.\nDo you wish to register another one?","SAVING",JOptionPane.YES_NO_OPTION);
+            k=JOptionPane.showConfirmDialog(createUser,"Hall details successfully saved.\nDo you wish to register a new one?","SAVING",JOptionPane.YES_NO_OPTION);
         if(k==JOptionPane.YES_OPTION)
         {
                         
