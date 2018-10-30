@@ -319,7 +319,7 @@ this.dispose();        // TODO add your handling code here:
         }
         else if(price.getText().equals(""))
         {
-        JOptionPane.showMessageDialog(createUser,"Sorry, you did not the price of tickets to be placed!","Missing Price!",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(createUser,"Sorry1 you did not the price of tickets to be placed!","Missing Price!",JOptionPane.INFORMATION_MESSAGE);
         price.requestFocus();
         }
         else if(Qty.getText().equals(""))
