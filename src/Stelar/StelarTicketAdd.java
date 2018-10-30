@@ -92,7 +92,7 @@ try {
          statement.executeUpdate();
          statement.close();
                      int k;
-            k=JOptionPane.showConfirmDialog(createUser,"Ticket details successfully saved.\nDo you wish to register another one?","SAVING",JOptionPane.YES_NO_OPTION);
+            k=JOptionPane.showConfirmDialog(createUser,"Ticket details successfully added.\nDo you wish to register another one?","SAVING",JOptionPane.YES_NO_OPTION);
         if(k==JOptionPane.YES_OPTION)
         {
                         
@@ -314,17 +314,17 @@ this.dispose();        // TODO add your handling code here:
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
         if(seat.getText().equals(""))
         {
-        JOptionPane.showMessageDialog(createUser,"Sorry, you did not enter the seat number!","Missing ID!",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(createUser,"Sorry, you did not enter the seat number!","Missing Seat!",JOptionPane.INFORMATION_MESSAGE);
         seat.requestFocus();
         }
         else if(price.getText().equals(""))
         {
-        JOptionPane.showMessageDialog(createUser,"Sorry, you did not the price of tickets to be placed!","Missing Price!",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(createUser,"Sorry1 you did not the price of tickets to be placed!","Missing Ticket Price!",JOptionPane.INFORMATION_MESSAGE);
         price.requestFocus();
         }
         else if(Qty.getText().equals(""))
         {
-        JOptionPane.showMessageDialog(createUser,"Sorry, you did not the number of tickets to be placed!","Missing Quantity!",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(createUser,"Sorry, you did not the number of tickets to be placed!","Missing Numbers!",JOptionPane.INFORMATION_MESSAGE);
         Qty.requestFocus();
         }
         else
