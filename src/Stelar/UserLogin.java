@@ -34,7 +34,7 @@ public class UserLogin extends javax.swing.JFrame {
                     public void windowClosing(java.awt.event.WindowEvent e) 
                     {
                         int y;
-                        y=JOptionPane.showConfirmDialog(jPanel1,"Do Really You Want to Exit This Application?","Confirm!",JOptionPane.YES_NO_OPTION);
+                        y=JOptionPane.showConfirmDialog(jPanel1,"Do Really You Want to Quit This Application?","Confirm!",JOptionPane.YES_NO_OPTION);
                         if(y==JOptionPane.YES_OPTION)
                         {
                         System.exit(0);
