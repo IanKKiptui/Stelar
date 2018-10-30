@@ -45,7 +45,7 @@ try {
          statement.executeUpdate();
          statement.close();
                      int k;
-            k=JOptionPane.showConfirmDialog(createUser,"Movie details successfully saved.\nDo you wish to register another one?","SAVING",JOptionPane.YES_NO_OPTION);
+            k=JOptionPane.showConfirmDialog(createUser,"Movie details successfully saved.\nDo you wish to register another movie?","SAVING",JOptionPane.YES_NO_OPTION);
         if(k==JOptionPane.YES_OPTION)
         {
                         
