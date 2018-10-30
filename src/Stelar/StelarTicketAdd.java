@@ -324,7 +324,7 @@ this.dispose();        // TODO add your handling code here:
         }
         else if(Qty.getText().equals(""))
         {
-        JOptionPane.showMessageDialog(createUser,"Sorry, you did not the number of tickets to be placed!","Missing Quantity!",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(createUser,"Sorry, you did not the number of tickets to be placed!","Missing Numbers!",JOptionPane.INFORMATION_MESSAGE);
         Qty.requestFocus();
         }
         else
