@@ -206,7 +206,7 @@ String passw;
         passw=new String(pas.getPassword());
         if(passw.equals(""))
             {
-            JOptionPane.showMessageDialog(jPanel1,"Sorry, you did not enter the password!","Missing Passorwd!",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(jPanel1,"Please enter your password!","Missing Passorwd!",JOptionPane.INFORMATION_MESSAGE);
             pas.requestFocus();
 
             } 
