@@ -202,7 +202,16 @@ if(pass.equals(pass1))
     }// </editor-fold>//GEN-END:initComponents
 
     private void pasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasActionPerformed
-        // TODO add your handling code here:
+String passw;
+        passw=new String(pas.getPassword());
+        if(passw.equals(""))
+            {
+            JOptionPane.showMessageDialog(jPanel1,"Sorry, you did not enter the password!","Missing Passorwd!",JOptionPane.INFORMATION_MESSAGE);
+            pas.requestFocus();
+
+            } 
+        else
+        {PassCheck();}        // TODO add your handling code here:
     }//GEN-LAST:event_pasActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
