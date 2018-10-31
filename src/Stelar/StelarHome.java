@@ -99,6 +99,11 @@ public class StelarHome extends javax.swing.JFrame {
         jMenu2.setText("Movies");
 
         jMenuItem1.setText("Add New Movie");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem1);
 
         jMenuItem5.setText("Edit Existing Movie");
@@ -194,6 +199,10 @@ BuyTicket dialog = new BuyTicket(new javax.swing.JFrame(), true);
 StelarUserReg dialog = new StelarUserReg(new javax.swing.JFrame(), true);
          dialog.setVisible(true);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
