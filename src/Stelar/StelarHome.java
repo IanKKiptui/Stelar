@@ -38,12 +38,8 @@ public class StelarHome extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
@@ -106,12 +102,6 @@ public class StelarHome extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem1);
 
-        jMenuItem5.setText("Edit Existing Movie");
-        jMenu2.add(jMenuItem5);
-
-        jMenuItem6.setText("Delete Movie");
-        jMenu2.add(jMenuItem6);
-
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Halls");
@@ -123,12 +113,6 @@ public class StelarHome extends javax.swing.JFrame {
             }
         });
         jMenu3.add(jMenuItem2);
-
-        jMenuItem3.setText("Edit Existing Hall");
-        jMenu3.add(jMenuItem3);
-
-        jMenuItem4.setText("Delete Hall");
-        jMenu3.add(jMenuItem4);
 
         jMenuBar1.add(jMenu3);
 
@@ -250,10 +234,6 @@ StelarUserReg dialog = new StelarUserReg(new javax.swing.JFrame(), true);
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
