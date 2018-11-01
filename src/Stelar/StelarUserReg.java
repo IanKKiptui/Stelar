@@ -50,7 +50,7 @@ try {
 catch (Exception exc) 
       {  // process error
             System.out.println("process error" + exc);
-            JOptionPane.showMessageDialog(createUser,"Sorry, Failed To Access Database!\nOpen Xampp And Set MySql Running","Error!",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(createUser,"Kindly Open XAMPP and run MySql\nAccess to database has failed","Failed",JOptionPane.ERROR_MESSAGE);
             System.exit(0);
       }
 }
@@ -69,7 +69,7 @@ try {
          statement.executeUpdate();
          statement.close();
                      int k;
-            k=JOptionPane.showConfirmDialog(createUser,"User details successfully saved.\nDo you wish to register another one?","SAVING",JOptionPane.YES_NO_OPTION);
+            k=JOptionPane.showConfirmDialog(createUser,"All details have been saved.\nWant to register another user?","User Created",JOptionPane.YES_NO_OPTION);
         if(k==JOptionPane.YES_OPTION)
         {
                         
@@ -84,7 +84,7 @@ conn.close();
         }
          catch (Exception exc) {  // process error
             System.out.println("process error" + exc);
-                       JOptionPane.showMessageDialog(createUser,"Sorry, An Error Occurred!","Error!",JOptionPane.ERROR_MESSAGE);
+                       JOptionPane.showMessageDialog(createUser,"An error has been detected!","Failed",JOptionPane.ERROR_MESSAGE);
                 }
 }
     /**
@@ -111,14 +111,15 @@ conn.close();
         Privilege = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Create New User");
+        setTitle("User Registration");
 
-        createUser.setBackground(new java.awt.Color(51, 51, 51));
+        createUser.setBackground(new java.awt.Color(204, 204, 204));
         createUser.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "User Details", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(255, 255, 255))); // NOI18N
+        createUser.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 13)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("ID:");
+        jLabel1.setText("User ID:");
 
         UserID.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         UserID.setDisabledTextColor(new java.awt.Color(0, 0, 0));
@@ -130,17 +131,17 @@ conn.close();
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Username:");
+        jLabel3.setText("Type username:");
 
         user.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Password");
+        jLabel4.setText("Enter Password:");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Password (R):");
+        jLabel6.setText("Repeat Password:");
 
         jToggleButton1.setText("Discard");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -176,28 +177,26 @@ conn.close();
             createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(createUserLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, createUserLayout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addComponent(jToggleButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                        .addComponent(jToggleButton2)
-                        .addGap(37, 37, 37))
-                    .addGroup(createUserLayout.createSequentialGroup()
-                        .addGroup(createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(UserID)
-                            .addComponent(Privilege, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(user, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
-                            .addComponent(pass1)
-                            .addComponent(pass2, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addGroup(createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 336, Short.MAX_VALUE)
+                .addGroup(createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(UserID)
+                    .addComponent(Privilege, 0, 211, Short.MAX_VALUE)
+                    .addComponent(user)
+                    .addComponent(pass1)
+                    .addComponent(pass2, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(35, 35, 35))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, createUserLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jToggleButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jToggleButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(136, 136, 136))
         );
         createUserLayout.setVerticalGroup(
             createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -222,22 +221,22 @@ conn.close();
                 .addGroup(createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(pass2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addGroup(createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton1)
-                    .addComponent(jToggleButton2))
-                .addGap(40, 40, 40))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addComponent(jToggleButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jToggleButton1)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(createUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(createUser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(createUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(createUser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -254,22 +253,22 @@ ps2=new String(pass2.getPassword());
 
         if(UserID.getText().equals(""))
 {
-JOptionPane.showMessageDialog(createUser,"Sorry, you did not enter the user ID!","Missing ID!",JOptionPane.INFORMATION_MESSAGE);
+JOptionPane.showMessageDialog(createUser,"Error, your user ID is missing","User ID Not Present",JOptionPane.INFORMATION_MESSAGE);
 UserID.requestFocus();
 }
 else if(user.getText().equals(""))
 {
-JOptionPane.showMessageDialog(createUser,"Sorry, you did not the username!","Missing Username!",JOptionPane.INFORMATION_MESSAGE);
+JOptionPane.showMessageDialog(createUser,"Error, your username is missing","Username Not Present",JOptionPane.INFORMATION_MESSAGE);
 user.requestFocus();
 }
 else if (ps1.equals(""))
 {
-JOptionPane.showMessageDialog(createUser,"Sorry, you did not enter your password!","Missing Password!",JOptionPane.INFORMATION_MESSAGE);
+JOptionPane.showMessageDialog(createUser,"Error, your password is missing","Password Not Present",JOptionPane.INFORMATION_MESSAGE);
 pass1.requestFocus();
 }
 else if(ps2.equals(""))
 {
-JOptionPane.showMessageDialog(createUser,"Please re-type your password!","Password Not Confirmed!",JOptionPane.INFORMATION_MESSAGE);
+JOptionPane.showMessageDialog(createUser,"Password not set","Please retype",JOptionPane.INFORMATION_MESSAGE);
 pass2.requestFocus();
 }
 
@@ -280,7 +279,7 @@ regUser();
 
 else
 {
-JOptionPane.showMessageDialog(createUser,"Sorry, The passwords do not match!","Mis-match!",JOptionPane.INFORMATION_MESSAGE);
+JOptionPane.showMessageDialog(createUser,"The passwords do not match","Check passwords",JOptionPane.INFORMATION_MESSAGE);
 pass1.setText("");
 pass2.setText("");
 pass1.requestFocus();        }
