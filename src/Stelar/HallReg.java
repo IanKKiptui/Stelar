@@ -84,6 +84,8 @@ conn.close();
 
         createUser.setBackground(new java.awt.Color(255, 0, 51));
         createUser.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Hall Details", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(255, 255, 255))); // NOI18N
+        createUser.setFocusable(false);
+        createUser.setFont(new java.awt.Font("Viner Hand ITC", 0, 14)); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Viner Hand ITC", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -158,24 +160,23 @@ conn.close();
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-this.dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
-
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
 
         if(HallName.getText().equals(""))
         {
-        JOptionPane.showMessageDialog(createUser,"No hall name entered","Blank",JOptionPane.INFORMATION_MESSAGE);
-        HallName.requestFocus();
+            JOptionPane.showMessageDialog(createUser,"No hall name entered","Blank",JOptionPane.INFORMATION_MESSAGE);
+            HallName.requestFocus();
         }
 
-        else 
+        else
         {
-        regMovie();
+            regMovie();
         }
-
     }//GEN-LAST:event_jToggleButton2ActionPerformed
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
      * @param args the command line arguments

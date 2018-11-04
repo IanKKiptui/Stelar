@@ -50,7 +50,7 @@ try {
 catch (Exception exc) 
       {  // process error
             System.out.println("process error" + exc);
-            JOptionPane.showMessageDialog(createUser,"Sorry, An Error Occurred","Error!",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(createUser,"Error has occurred","Sorry",JOptionPane.ERROR_MESSAGE);
             System.exit(0);
       }
       }
@@ -71,7 +71,7 @@ try {
 catch (Exception exc) 
       {  // process error
             System.out.println("process error" + exc);
-            JOptionPane.showMessageDialog(createUser,"Sorry, An Error Occurred","Error!",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(createUser,"Error has occurred","Sorry",JOptionPane.ERROR_MESSAGE);
             System.exit(0);
       }
       }
@@ -92,7 +92,7 @@ try {
          statement.executeUpdate();
          statement.close();
                      int k;
-            k=JOptionPane.showConfirmDialog(createUser,"Ticket details successfully added.\nDo you wish to register another one?","SAVING",JOptionPane.YES_NO_OPTION);
+            k=JOptionPane.showConfirmDialog(createUser,"Ticket details added.\nCreate other ones?","Successful",JOptionPane.YES_NO_OPTION);
         if(k==JOptionPane.YES_OPTION)
         {
                         
@@ -107,7 +107,7 @@ conn.close();
         }
          catch (Exception exc) {  // process error
             System.out.println("process error" + exc);
-                       JOptionPane.showMessageDialog(createUser,"Sorry, An Error Occurred!","Error!",JOptionPane.ERROR_MESSAGE);
+                       JOptionPane.showMessageDialog(createUser,"Error has occurred","Sorry",JOptionPane.ERROR_MESSAGE);
                 }
 }
     /**
@@ -138,32 +138,34 @@ conn.close();
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Add Tickets");
 
-        createUser.setBackground(new java.awt.Color(51, 51, 51));
+        createUser.setBackground(new java.awt.Color(255, 0, 51));
         createUser.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "User Details", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Viner Hand ITC", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Movie:");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Viner Hand ITC", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Hall:");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Viner Hand ITC", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Date:");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Viner Hand ITC", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Seat:");
 
-        jToggleButton1.setText("Discard");
+        jToggleButton1.setFont(new java.awt.Font("Viner Hand ITC", 0, 18)); // NOI18N
+        jToggleButton1.setText("Drop/Discard");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
             }
         });
 
+        jToggleButton2.setFont(new java.awt.Font("Viner Hand ITC", 0, 18)); // NOI18N
         jToggleButton2.setText("Add Ticket");
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,11 +219,11 @@ conn.close();
     DateC.setNavigateFont(new java.awt.Font("Segoe UI", java.awt.Font.PLAIN, 11));
     DateC.setBehavior(datechooser.model.multiple.MultyModelBehavior.SELECT_SINGLE);
 
-    jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+    jLabel7.setFont(new java.awt.Font("Viner Hand ITC", 0, 18)); // NOI18N
     jLabel7.setForeground(new java.awt.Color(255, 255, 255));
     jLabel7.setText("Tickets Qty:");
 
-    jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+    jLabel8.setFont(new java.awt.Font("Viner Hand ITC", 0, 18)); // NOI18N
     jLabel8.setForeground(new java.awt.Color(255, 255, 255));
     jLabel8.setText("Price:");
 
@@ -233,11 +235,11 @@ conn.close();
             .addContainerGap()
             .addGroup(createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, createUserLayout.createSequentialGroup()
-                    .addGap(53, 53, 53)
-                    .addComponent(jToggleButton1)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                    .addComponent(jToggleButton2)
-                    .addGap(72, 72, 72))
+                    .addGap(71, 71, 71)
+                    .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(43, 43, 43)
+                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(96, Short.MAX_VALUE))
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, createUserLayout.createSequentialGroup()
                     .addGroup(createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel3)
@@ -248,11 +250,11 @@ conn.close();
                         .addComponent(jLabel8))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(price, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
-                        .addComponent(Qty, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
-                        .addComponent(MovieName, javax.swing.GroupLayout.Alignment.LEADING, 0, 211, Short.MAX_VALUE)
-                        .addComponent(HallName, javax.swing.GroupLayout.Alignment.LEADING, 0, 211, Short.MAX_VALUE)
-                        .addComponent(DateC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(price)
+                        .addComponent(Qty)
+                        .addComponent(MovieName, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(HallName, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(DateC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
                         .addComponent(seat, javax.swing.GroupLayout.Alignment.LEADING))
                     .addGap(35, 35, 35))))
     );
@@ -283,18 +285,18 @@ conn.close();
             .addGroup(createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(jLabel7)
                 .addComponent(Qty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(26, 26, 26)
+            .addGap(34, 34, 34)
             .addGroup(createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jToggleButton1)
-                .addComponent(jToggleButton2))
-            .addGap(40, 40, 40))
+                .addComponent(jToggleButton2)
+                .addComponent(jToggleButton1))
+            .addGap(32, 32, 32))
     );
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addComponent(createUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addComponent(createUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
     );
     layout.setVerticalGroup(
         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -313,17 +315,17 @@ this.dispose();        // TODO add your handling code here:
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
         if(seat.getText().equals(""))
         {
-        JOptionPane.showMessageDialog(createUser,"Sorry, you did not enter the seat number!","Missing Seat!",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(createUser,"No seat number entered","Seat Number Blank",JOptionPane.INFORMATION_MESSAGE);
         seat.requestFocus();
         }
         else if(price.getText().equals(""))
         {
-        JOptionPane.showMessageDialog(createUser,"Sorry1 you did not the price of tickets to be placed!","Missing Ticket Price!",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(createUser,"No price of tickets placed","Ticket Price Blank",JOptionPane.INFORMATION_MESSAGE);
         price.requestFocus();
         }
         else if(Qty.getText().equals(""))
         {
-        JOptionPane.showMessageDialog(createUser,"Sorry, you did not the number of tickets to be placed!","Missing Numbers!",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(createUser,"Number of tickets not entered","Ticket Numbers Blank",JOptionPane.INFORMATION_MESSAGE);
         Qty.requestFocus();
         }
         else
