@@ -129,7 +129,7 @@ try {
          statement.close();
             
          int k;
-            k=JOptionPane.showConfirmDialog(jPanel2,"Success!"+MovieName+" Ticket has been reserved! Do you wish to make another purchase?","Ticket order",JOptionPane.YES_NO_OPTION);
+            k=JOptionPane.showConfirmDialog(jPanel2,"Purchased"+MovieName+" Ticket reserved. Buy another ticket?","Ticket Order",JOptionPane.YES_NO_OPTION);
         if(k==JOptionPane.YES_OPTION)
         {
           ReduceTickets();              
@@ -144,7 +144,7 @@ conn.close();
         }
          catch (Exception exc) {  // process error
             System.out.println("process error" + exc);
-                       JOptionPane.showMessageDialog(jPanel2,"Sorry, An Error Occurred!","Error!",JOptionPane.ERROR_MESSAGE);
+                       JOptionPane.showMessageDialog(jPanel2,"An error has occurred","Sorry",JOptionPane.ERROR_MESSAGE);
                 }
 }
 private void ReduceTickets()
@@ -162,7 +162,7 @@ conn.close();
         }
          catch (Exception exc) {  // process error
             System.out.println("process error" + exc);
-                       JOptionPane.showMessageDialog(jPanel2,"Sorry, An Error Occurred!","Error!",JOptionPane.ERROR_MESSAGE);
+                       JOptionPane.showMessageDialog(jPanel2,"An error has occured","Sorry",JOptionPane.ERROR_MESSAGE);
                 }
 }
 
@@ -304,12 +304,12 @@ this.dispose();        // TODO add your handling code here:
 
         if(TicketID=="")
         {
-        JOptionPane.showMessageDialog(jPanel2,"Sorry, you have not chosen any movie to buy ticket for!","No Input!",JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(jPanel2,"No Movie Chosen!","Blank",JOptionPane.WARNING_MESSAGE);
 
         }
         else{
         int choice;
-            choice=JOptionPane.showConfirmDialog(jPanel2,"An ticket for "+MovieName+" will be  reserved! Are you sure you want to place the order?","Order Confirmation",JOptionPane.YES_NO_OPTION);
+            choice=JOptionPane.showConfirmDialog(jPanel2,"Ticket for "+MovieName+" will be reserved. Place the movie order?","Movie Confirmation",JOptionPane.YES_NO_OPTION);
         if(choice==JOptionPane.YES_OPTION)
         {
           BuyTicko();              
