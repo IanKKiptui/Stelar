@@ -144,7 +144,7 @@ conn.close();
         }
          catch (Exception exc) {  // process error
             System.out.println("process error" + exc);
-                       JOptionPane.showMessageDialog(jPanel2,"An error has occurred","Sorry",JOptionPane.ERROR_MESSAGE);
+                       JOptionPane.showMessageDialog(jPanel2,"Error has occurred","Sorry",JOptionPane.ERROR_MESSAGE);
                 }
 }
 private void ReduceTickets()
@@ -162,7 +162,7 @@ conn.close();
         }
          catch (Exception exc) {  // process error
             System.out.println("process error" + exc);
-                       JOptionPane.showMessageDialog(jPanel2,"An error has occured","Sorry",JOptionPane.ERROR_MESSAGE);
+                       JOptionPane.showMessageDialog(jPanel2,"Error has occured","Sorry",JOptionPane.ERROR_MESSAGE);
                 }
 }
 
