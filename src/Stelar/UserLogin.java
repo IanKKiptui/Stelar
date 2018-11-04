@@ -34,7 +34,7 @@ public class UserLogin extends javax.swing.JFrame {
                     public void windowClosing(java.awt.event.WindowEvent e) 
                     {
                         int y;
-                        y=JOptionPane.showConfirmDialog(jPanel1,"Do Really You Want to Quit The Application?","Confirm!",JOptionPane.YES_NO_OPTION);
+                        y=JOptionPane.showConfirmDialog(jPanel1,"Exit Stelar?","Verify",JOptionPane.YES_NO_OPTION);
                         if(y==JOptionPane.YES_OPTION)
                         {
                         System.exit(0);
@@ -59,7 +59,7 @@ try {
 catch (Exception exc) 
       {  // process error
             System.out.println("process error" + exc);
-            JOptionPane.showMessageDialog(jPanel1,"Sorry, An Error Occurred","Error!",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(jPanel1,"Error detected","Sorry",JOptionPane.ERROR_MESSAGE);
             System.exit(0);
       }
       }
@@ -92,7 +92,7 @@ if(pass.equals(pass1))
     }
  else
      {
-     JOptionPane.showMessageDialog(jPanel1," Wrong Password You Entered!","Wrong Input!",JOptionPane.WARNING_MESSAGE);
+     JOptionPane.showMessageDialog(jPanel1,"Enter Again","Incorrect Password",JOptionPane.WARNING_MESSAGE);
      pas.setText("");
                }
 }
@@ -114,7 +114,7 @@ if(pass.equals(pass1))
         jToggleButton2 = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        setTitle("User Log In");
+        setTitle("Login");
 
         jPanel1.setBackground(new java.awt.Color(255, 0, 51));
 
@@ -212,7 +212,7 @@ String passw;
         passw=new String(pas.getPassword());
         if(passw.equals(""))
             {
-            JOptionPane.showMessageDialog(jPanel1,"Please enter your password!","Missing Passorwd!",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(jPanel1,"Enter your password","No Entry Made",JOptionPane.INFORMATION_MESSAGE);
             pas.requestFocus();
 
             } 
@@ -222,7 +222,7 @@ String passw;
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
             int y;
-            y=JOptionPane.showConfirmDialog(jPanel1,"Do Really You Want to Exit This Part Of Application?","Confirm!",JOptionPane.YES_NO_OPTION);
+            y=JOptionPane.showConfirmDialog(jPanel1,"Close this section of Stelar?","Verify",JOptionPane.YES_NO_OPTION);
                 if(y==JOptionPane.YES_OPTION)
                     {
                         this.dispose();
@@ -234,7 +234,7 @@ String passw;
         passw=new String(pas.getPassword());
         if(passw.equals(""))
             {
-            JOptionPane.showMessageDialog(jPanel1,"Sorry, you did not enter the password!","Missing Passorwd!",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(jPanel1,"No entry made","No Password",JOptionPane.INFORMATION_MESSAGE);
             pas.requestFocus();
 
             } 
