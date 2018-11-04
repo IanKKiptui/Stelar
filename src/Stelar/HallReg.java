@@ -45,7 +45,7 @@ try {
          statement.executeUpdate();
          statement.close();
                      int k;
-            k=JOptionPane.showConfirmDialog(createUser,"Hall details successfully saved.\nDo you wish to register a new one?","SAVING",JOptionPane.YES_NO_OPTION);
+            k=JOptionPane.showConfirmDialog(createUser,"Hall Details Saved.\n Create another one?","Successful",JOptionPane.YES_NO_OPTION);
         if(k==JOptionPane.YES_OPTION)
         {
                         
@@ -60,7 +60,7 @@ conn.close();
         }
          catch (Exception exc) {  // process error
             System.out.println("process error" + exc);
-                       JOptionPane.showMessageDialog(createUser,"Sorry, An Error Occurred!","Error!",JOptionPane.ERROR_MESSAGE);
+                       JOptionPane.showMessageDialog(createUser,"An error occured","Sorry",JOptionPane.ERROR_MESSAGE);
                 }
 }
     /**
@@ -82,13 +82,14 @@ conn.close();
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Add New Hall");
 
-        createUser.setBackground(new java.awt.Color(51, 51, 51));
+        createUser.setBackground(new java.awt.Color(255, 0, 51));
         createUser.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Hall Details", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Viner Hand ITC", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Hall Name:");
 
+        jToggleButton1.setFont(new java.awt.Font("Viner Hand ITC", 0, 18)); // NOI18N
         jToggleButton1.setText("Discard");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,6 +97,7 @@ conn.close();
             }
         });
 
+        jToggleButton2.setFont(new java.awt.Font("Viner Hand ITC", 0, 18)); // NOI18N
         jToggleButton2.setText("Add Hall");
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,17 +114,17 @@ conn.close();
         createUserLayout.setHorizontalGroup(
             createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(createUserLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(5, 5, 5)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1)
                 .addGap(13, 13, 13))
             .addGroup(createUserLayout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(jToggleButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
-                .addComponent(jToggleButton1)
-                .addGap(47, 47, 47))
+                .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40))
         );
         createUserLayout.setVerticalGroup(
             createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,18 +137,22 @@ conn.close();
                 .addGroup(createUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jToggleButton1)
                     .addComponent(jToggleButton2))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(createUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(createUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(createUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(createUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -160,7 +166,7 @@ this.dispose();        // TODO add your handling code here:
 
         if(HallName.getText().equals(""))
         {
-        JOptionPane.showMessageDialog(createUser,"Sorry, you did not enter the Hall Name!","Missing ID!",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(createUser,"No hall name entered","Blank",JOptionPane.INFORMATION_MESSAGE);
         HallName.requestFocus();
         }
 
