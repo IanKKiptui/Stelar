@@ -221,7 +221,7 @@ conn.close();
 
     jLabel7.setFont(new java.awt.Font("Viner Hand ITC", 0, 18)); // NOI18N
     jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel7.setText("Tickets Qty:");
+    jLabel7.setText("Tickets Quantity:");
 
     jLabel8.setFont(new java.awt.Font("Viner Hand ITC", 0, 18)); // NOI18N
     jLabel8.setForeground(new java.awt.Color(255, 255, 255));
